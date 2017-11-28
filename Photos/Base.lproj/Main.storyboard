@@ -57,31 +57,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PIy-Xt-Ocp">
-                                <rect key="frame" x="50" y="84" width="275" height="275"/>
+                                <rect key="frame" x="20" y="84" width="335" height="186"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="PIy-Xt-Ocp" secondAttribute="height" multiplier="1:1" id="frO-xY-yzp"/>
+                                    <constraint firstAttribute="width" secondItem="PIy-Xt-Ocp" secondAttribute="height" multiplier="9:5" id="frO-xY-yzp"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFu-cU-1VD">
-                                <rect key="frame" x="50" y="367" width="275" height="30"/>
+                                <rect key="frame" x="20" y="278" width="335" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5B-6c-mFz">
-                                <rect key="frame" x="164" y="417" width="46" height="30"/>
+                                <rect key="frame" x="164" y="328" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="4jF-ff-PGd" firstAttribute="trailing" secondItem="AFu-cU-1VD" secondAttribute="trailing" constant="50" id="1Sd-ZK-UBg"/>
+                            <constraint firstItem="4jF-ff-PGd" firstAttribute="trailing" secondItem="AFu-cU-1VD" secondAttribute="trailing" constant="20" id="1Sd-ZK-UBg"/>
                             <constraint firstItem="PIy-Xt-Ocp" firstAttribute="top" secondItem="4jF-ff-PGd" secondAttribute="top" constant="20" id="44T-DV-LFn"/>
                             <constraint firstItem="AFu-cU-1VD" firstAttribute="top" secondItem="PIy-Xt-Ocp" secondAttribute="bottom" constant="8" id="Gzg-57-mnK"/>
                             <constraint firstItem="P5B-6c-mFz" firstAttribute="top" secondItem="AFu-cU-1VD" secondAttribute="bottom" constant="20" id="OD4-DB-dB9"/>
-                            <constraint firstItem="AFu-cU-1VD" firstAttribute="leading" secondItem="4jF-ff-PGd" secondAttribute="leading" constant="50" id="bFU-7J-xtl"/>
-                            <constraint firstItem="4jF-ff-PGd" firstAttribute="trailing" secondItem="PIy-Xt-Ocp" secondAttribute="trailing" constant="50" id="gbK-hC-ap5"/>
-                            <constraint firstItem="PIy-Xt-Ocp" firstAttribute="leading" secondItem="4jF-ff-PGd" secondAttribute="leading" constant="50" id="iBl-Tb-puG"/>
+                            <constraint firstItem="AFu-cU-1VD" firstAttribute="leading" secondItem="4jF-ff-PGd" secondAttribute="leading" constant="20" id="bFU-7J-xtl"/>
+                            <constraint firstItem="4jF-ff-PGd" firstAttribute="trailing" secondItem="PIy-Xt-Ocp" secondAttribute="trailing" constant="20" id="gbK-hC-ap5"/>
+                            <constraint firstItem="PIy-Xt-Ocp" firstAttribute="leading" secondItem="4jF-ff-PGd" secondAttribute="leading" constant="20" id="iBl-Tb-puG"/>
                             <constraint firstItem="P5B-6c-mFz" firstAttribute="centerX" secondItem="tpX-Du-E1F" secondAttribute="centerX" id="ks7-ol-Rzo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4jF-ff-PGd"/>
