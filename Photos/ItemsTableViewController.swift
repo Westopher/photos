@@ -63,16 +63,14 @@ class ItemsTableViewController: UITableViewController {
         return true
     }
     
-    
-    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
                 let item = items[indexPath.row]
                 context.delete(item)
-                tableView.reloadData()
-            }    
+                getItems()
+            }
         }
     }
 }
