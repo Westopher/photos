@@ -9,7 +9,7 @@
 import UIKit
 
 class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     
     @IBOutlet var itemImageView: UIImageView!
     @IBOutlet var titleTextField: UITextField!
@@ -20,16 +20,17 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         
         imagePicker.delegate = self
-
+        
     }
-
+    
     @IBAction func photosTapped(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func cameraTapped(_ sender: Any) {
-       // imagePicker.sourceType = .camera
+        imagePicker.sourceType = .camera
+        present(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -41,7 +42,25 @@ class AddItemViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     @IBAction func addTapped(_ sender: Any) {
-        print("hello world")
+        //creates coreData entity
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            let item = Item(entity: Item.entity(), insertInto: context)
+            
+            //uses coreData entity (the title)
+            item.title = titleTextField.text
+            
+            //the image though needs to be a data type because that's what it's under in coreData. So we make that transformation here.
+            if let image = itemImageView.image {
+                if let imageData = UIImagePNGRepresentation(image) {
+                    item.image = imageData
+                }
+            }
+            
+            try? context.save()
+            
+            navigationController?.popViewController(animated: true)
+        }
     }
     
 }
