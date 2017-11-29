@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="423" y="30"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Item View Controller-->
         <scene sceneID="QGX-Hp-ggb">
             <objects>
-                <viewController id="9R8-tb-vcs" sceneMemberID="viewController">
+                <viewController id="9R8-tb-vcs" customClass="AddItemViewController" customModule="Photos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tpX-Du-E1F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,8 +69,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5B-6c-mFz">
-                                <rect key="frame" x="164" y="328" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="172.5" y="328" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="9R8-tb-vcs" eventType="touchUpInside" id="ec6-BG-OUv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,10 +91,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="s4g-AP-Lvc">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="c50-am-DVZ"/>
-                            <barButtonItem systemItem="organize" id="Oy5-cg-Y0f"/>
+                            <barButtonItem systemItem="camera" id="c50-am-DVZ">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="9R8-tb-vcs" id="rm4-eG-3IL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="Oy5-cg-Y0f">
+                                <connections>
+                                    <action selector="photosTapped:" destination="9R8-tb-vcs" id="Pf2-IF-ZZr"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="itemImageView" destination="PIy-Xt-Ocp" id="k1g-dS-Pa0"/>
+                        <outlet property="titleTextField" destination="AFu-cU-1VD" id="eHk-hh-SQ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gsb-WO-hFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

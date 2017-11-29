@@ -12,6 +12,7 @@
 		3D83E0851FCDCBE300C78935 /* Photos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D83E0831FCDCBE300C78935 /* Photos.xcdatamodeld */; };
 		3D83E0871FCDCBE300C78935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D83E0861FCDCBE300C78935 /* Assets.xcassets */; };
 		3D83E08A1FCDCBE300C78935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D83E0881FCDCBE300C78935 /* LaunchScreen.storyboard */; };
+		3D83E0921FCF21DD00C78935 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D83E0911FCF21DD00C78935 /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3D83E0861FCDCBE300C78935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D83E0891FCDCBE300C78935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D83E08B1FCDCBE300C78935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D83E0911FCF21DD00C78935 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				3D83E07C1FCDCBE300C78935 /* AppDelegate.swift */,
+				3D83E0911FCF21DD00C78935 /* AddItemViewController.swift */,
 				3D83E0801FCDCBE300C78935 /* Main.storyboard */,
 				3D83E0861FCDCBE300C78935 /* Assets.xcassets */,
 				3D83E0881FCDCBE300C78935 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				3D83E0851FCDCBE300C78935 /* Photos.xcdatamodeld in Sources */,
 				3D83E07D1FCDCBE300C78935 /* AppDelegate.swift in Sources */,
+				3D83E0921FCF21DD00C78935 /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
